@@ -127,3 +127,22 @@ docker image ls
 docker image rm bretfisher/testing-node
 
 docker container run --rm -p 80:3000 bretfisher/testing-node
+
+## Dockerfile to build the assignment above
+
+FROM node:6-alpine
+
+EXPOSE 3000
+
+RUN apk add --no-cache tini
+
+WORKDIR /usr/src/app
+
+COPY package.json package.json
+
+RUN npm install && npm cache clean --force
+
+COPY . .
+
+CMD [ "/sbin/tini", "--", "node", "./bin/www" ]
+
