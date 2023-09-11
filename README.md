@@ -1,1 +1,2 @@
-# docker_tasks
+# Docker Mastery
+This repository is a compilation of tasks, exercises, and examples derived from the Docker Mastery Course, which is a comprehensive educational program encompassing various facets of containerization and orchestration. Within this repository, you will find tasks and assignments that align with specific course modules, offering practical opportunities to enhance your proficiency in Docker, Kubernetes, and Docker Swarm.
